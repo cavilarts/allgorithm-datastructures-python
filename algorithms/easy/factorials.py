@@ -1,5 +1,6 @@
 
 """ 
+  ***** BETTER *****
   Iterative approach
   calculate_factorial
   @params n = int
