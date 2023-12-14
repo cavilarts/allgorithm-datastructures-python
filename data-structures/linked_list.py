@@ -47,7 +47,15 @@ class LinkedList:
         break
       prev = temp
       temp = temp.next
-    prev.next = temp.next      
+    prev.next = temp.next
+    
+  def delete_tail(self):
+    temp = self.head
+    
+    while temp.next.next is not None:
+      temp = temp.next
+    
+    temp.next = None 
 
 family = LinkedList()
 family.add_node("Bob")
@@ -59,5 +67,9 @@ family.traversal()
 print("*" * 40)
 family.delete_node("Bob")
 
+family.traversal()
+print("*" * 40)
+
+family.delete_tail()
 family.traversal()
   
